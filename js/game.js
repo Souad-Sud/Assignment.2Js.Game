@@ -76,19 +76,19 @@ const playGame = () => {
   } else if(userGuess.toUpperCase() === randomQuestion.answer.toUpperCase()) {
     window.alert(`Bravo -------- ${randomQuestion.answer}--------- is the good answer`);
     userWins++;             
-        alert( "! You have got  "  + userWins + " of " + questions + " right ");   
-        if(userWins === questions) {
+      alert( "! You have got  "  + userWins + " of " + questions + " right ");   
+      if(userWins === questions) {
           let finishTheGame = prompt(`You have finished the game -----Your score is ${userWins} / ${questions} congratulations---------- You are genius Enter finish to end the game`) ;
           if(finishTheGame === "finish") {
             startGame() = false;
             break;
             }                    
-          }
-        } else  {
+      }
+    } else  {
           window.alert(`-------${userGuess}---  ---- is not correct. the right answer is ${randomQuestion.answer}------- ${randomQuestion.message} `);      
           wrongQuestions--
-        }   
-      }            
+      }   
+  }            
 }
 
 const startGame = () => {
